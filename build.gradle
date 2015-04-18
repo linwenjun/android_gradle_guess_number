@@ -8,10 +8,22 @@ buildscript {
     }
 }
 
+repositories {
+    jcenter()
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'idea'
 
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
+}
+
+dependencies {
+    compile 'joda-time:joda-time:2.7'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
 }
